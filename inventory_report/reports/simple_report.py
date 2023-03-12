@@ -1,9 +1,10 @@
 from datetime import date
+from typing import List, Dict
 
 
 class SimpleReport:
     @staticmethod
-    def generate(data: list):
+    def generate(data: List[Dict]) -> str:
         oldest_manufacturing_date = str(date.max)
         nearest_expiration_date = str(date.max)
         today = str(date.today())
