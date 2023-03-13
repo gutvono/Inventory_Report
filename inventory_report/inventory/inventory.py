@@ -1,23 +1,19 @@
 from inventory_report.reports.simple_report import SimpleReport
 from inventory_report.reports.complete_report import CompleteReport
-import csv
-import json
-import xml.etree.ElementTree as xml
+from inventory_report.importer.csv_importer import CsvImporter
+from inventory_report.importer.json_importer import JsonImporter
+from inventory_report.importer.xml_importer import XmlImporter
 
 
 class Inventory:
     @staticmethod
     def get_file_extension(path: str) -> str:
-        with open(path, mode='r') as data:
-            if path.endswith('.csv'):
-                return [product for product in csv.DictReader(data)]
-            elif path.endswith('.json'):
-                return json.load(data)
-            elif path.endswith('.xml'):
-                return [
-                    {line.tag: line.text for line in product}
-                    for product in xml.parse(path).getroot()
-                ]
+        if path.endswith('.csv'):
+            return CsvImporter.import_data(path)
+        elif path.endswith('.json'):
+            return JsonImporter.import_data(path)
+        elif path.endswith('.xml'):
+            return XmlImporter.import_data(path)
 
     @staticmethod
     def import_data(path: str, type: str) -> str:

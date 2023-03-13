@@ -1,13 +1,13 @@
 import json
 from typing import List, Dict
-from importer import Importer
+from inventory_report.importer.importer import Importer
 
 
 class JsonImporter(Importer):
     @staticmethod
-    def get_file_content(path: str) -> List[Dict]:
+    def import_data(path: str) -> List[Dict]:
         with open(path, mode='r') as data:
             if path.endswith('.json'):
                 return json.load(data)
 
-        raise TypeError('Invalid file format')
+        raise ValueError('Arquivo inválido')
