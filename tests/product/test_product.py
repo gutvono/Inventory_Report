@@ -1,6 +1,7 @@
 from inventory_report.inventory.product import Product
 
 
+# Teste da classe Product.
 def test_cria_produto():
     id, ndp, nde, ddf, ddv, nds, ida = [
         1,

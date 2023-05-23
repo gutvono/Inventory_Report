@@ -2,6 +2,7 @@ from inventory_report.reports.simple_report import SimpleReport
 from typing import List, Dict
 
 
+# Classe responsável por gerar um relatório completo.
 class CompleteReport:
     @staticmethod
     def generate(data: List[Dict]) -> str:

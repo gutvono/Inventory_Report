@@ -2,6 +2,7 @@ from datetime import date
 from typing import List, Dict
 
 
+# Classe responsável por gerar um relatório simples.
 class SimpleReport:
     @staticmethod
     def generate(data: List[Dict]) -> str:

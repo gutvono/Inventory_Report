@@ -3,6 +3,8 @@ from typing import List, Dict
 from inventory_report.importer.importer import Importer
 
 
+# Classe responsável por importar o arquivo .xml e retornar os dados
+# em uma lista de dicionários pronto para serem manipulados.
 class XmlImporter(Importer):
     @staticmethod
     def import_data(path: str) -> List[Dict]:

@@ -6,6 +6,8 @@ from inventory_report.importer.xml_importer import XmlImporter
 
 
 class Inventory:
+    # Recebe o caminho do arquivo a ser lido (que pode ser .csv, .json ou .xml)
+    # e retorna os dados.
     @staticmethod
     def get_file_extension(path: str) -> str:
         if path.endswith('.csv'):
@@ -15,6 +17,7 @@ class Inventory:
         elif path.endswith('.xml'):
             return XmlImporter.import_data(path)
 
+    # Recebe o caminho do arquivo e o tipo de relatório que deve ser gerado.
     @staticmethod
     def import_data(path: str, type: str) -> str:
         products = Inventory.get_file_extension(path)
