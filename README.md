@@ -2,7 +2,7 @@
 
 🌱 O projeto tem como principal objetivo estudar POO (abstração, herança, encapsulamento e polimorfismo), Solid e manipulação de dados. Consiste em realizar relatórios de estoque simples e completos, com fontes de dados de diferentes tipos de arquivos.
 
-<img alt="work" src="https://visme.co/blog/wp-content/uploads/most-unique-reports-header.gif" width="500px">
+<img alt="work" src="https://visme.co/blog/wp-content/uploads/most-unique-reports-header.gif" width="700px">
 
 # Contexto geral:
 
