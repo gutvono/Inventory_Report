@@ -1,4 +1,4 @@
-# Boas-vindas ao repositório do projeto `Job Insights`!
+# Boas-vindas ao repositório do projeto `Inventory Report`!
 
 🌱 O projeto tem como principal objetivo estudar POO (abstração, herança, encapsulamento e polimorfismo), Solid e manipulação de dados. Consiste em realizar relatórios de estoque simples ou completos, com fontes de dados de diferentes tipos de arquivos.
 
